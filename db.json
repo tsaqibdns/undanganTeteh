@@ -1,0 +1,16 @@
+{
+  "ucapan": {
+    "autoId1": {
+      "nama": "Budi",
+      "pesan": "Selamat menempuh hidup baru!",
+      "hadir": true,
+      "waktu": 1715862840000
+    },
+    "autoId2": {
+      "nama": "Sari",
+      "pesan": "Langgeng terus yaa",
+      "hadir": false,
+      "waktu": 1715862900000
+    }
+  }
+}

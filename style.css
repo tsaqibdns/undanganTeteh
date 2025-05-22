@@ -1,0 +1,239 @@
+:root {
+  --color1: #f8f6f2;
+  --color2: #d8c3aa;
+  --color4: #94a798;
+  --color6: #4f6d55;
+  --font-1: 'Great Vibes', cursive;
+  --font-2: 'Lora', serif;
+  --font-3: 'raleway', sans-serif;
+}
+
+body {
+  background-color: var(--color4);
+  color: var(--color6);
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  background-color: var(--color1);
+  width: 700px;
+  height: 4590px;
+}
+
+.bg-bunga-pojok img {
+  width: 55%;
+  height: 55%;
+}
+
+.walimatul-urs {
+  font-family: var(--font-2);
+  color: var(--color6);
+  font-size: 1rem;
+  letter-spacing: 0.26em;
+  padding: 0 0 1em 0;
+}
+
+.ubaidillah {
+  margin: 0;
+}
+
+.ubaidillah-yusrina-container {
+  font-size: 4.7rem;
+  line-height: 1.2;
+  font-family: 'Great Vibes';
+  color: #4f6d55;
+  text-align: center;
+}
+
+.tanggal {
+  padding-top: 2em;
+  font-size: 1.3rem;
+  font-family: var(--font-2);
+  color: var(--color6);
+  text-align: center;
+}
+
+.save-date button {
+  width: 7rem;
+  font-size: 0.7rem;
+  background-color: var(--color6);
+  color: var(--color1);
+  border-radius: 0.2rem;
+  border: none;
+  padding: 0.4rem 0rem 0.4rem 0rem;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.save-date button:hover {
+  opacity: 0.8;
+}
+
+.save-date button:active,
+.save-date button.clicked {
+  background-color: var(--color1);
+  color: var(--color6);
+  border: 2px solid var(--color6);
+}
+
+.mukodimah{
+  margin-top: 4rem;
+}
+
+.img-bismillah{
+  height: 2.4rem;
+}
+
+.ornament-doa{
+  height: 0.4rem;
+}
+
+.dengan-rahmat-dan {
+  	font-size: 0.65rem;
+    line-height: 0.8rem;
+  	font-family: var(--font-2);
+  	color: #4f6d55;
+    margin: 1rem 3.5rem 0rem 3.5rem;
+}
+
+.ubay-yusrin-anak{
+  color: var(--color6);
+  margin-top: 2rem;
+}
+
+.nickname{
+  font-family: var(--font-1);
+  font-size: 6rem;
+  margin: 0rem 0rem 0rem 0rem;
+  padding: 0rem 0rem 0rem 0rem;
+}
+
+.nama-anak{
+  font-family: var(--font-2);
+  font-size: 1.5rem;
+  margin: 0rem 0rem 0rem 0rem;
+  padding: 0rem 0rem 0rem 0rem;
+}
+
+.anak-urutan{
+  font-family: var(--font-3);
+  font-weight: bold;
+  font-size: 0.7rem;
+  margin: 0rem 0rem 0rem 0rem;
+  padding: 0rem 0rem 0rem 0rem;
+}
+
+.dari{
+  font-family: var(--font-3); 
+  margin: 0rem 0rem 0rem 0rem;
+  padding: 0rem 0rem 0rem 0rem;
+}
+
+.waktu-tempat{
+  border: 2px solid var(--color6);
+  border-radius: 10px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.judul-event h1{
+  font-family: var(--font-2);
+  color: var(--color6);
+  font-size: 1.5rem;
+  margin-bottom: 0rem;
+}
+
+.atas{
+  width: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.bawah{
+  width: 11rem;
+  margin: 0rem;
+}
+
+.waktu-event{
+  margin-top: 1rem;
+}
+
+.waktu-event h1{
+  font-family: var(--font-2);
+  letter-spacing: 0.2em;
+  color: var(--color6);
+  font-size: 1rem;
+}
+
+.waktu-event-btn {
+  letter-spacing: 0.2em;
+  font-family: var(--font-2);
+  width: 9rem;
+  font-size: 0.7rem;
+  background-color: var(--color6);
+  color: var(--color1);
+  border-radius: 0.3rem;
+  border: none;
+  padding: 0.4rem 0rem;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.waktu-event-btn:hover {
+  opacity: 0.8;
+}
+
+.waktu-event-btn:active {
+  background-color: var(--color1);
+  color: var(--color6);
+  box-shadow: 0 0 0 2px var(--color6) inset;
+}
+
+
+.tempat-event{
+  margin-top: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.tempat-event h1{
+  font-family: var(--font-2);
+  letter-spacing: 0.2em;
+  color: var(--color6);
+  font-size: 1rem;
+}
+
+.tempat-event-btn {
+  width: 9rem;
+  letter-spacing: 0.2rem;
+  font-size: 0.7rem;
+  font-family: var(--font-2);
+  background-color: var(--color);
+  color: var(--color2);
+  box-shadow: 0 0 0 2px var(--color2) inset;
+  border-radius: 0.3rem;
+  border: none;
+  padding: 0.4rem 0rem;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  border: 2px solid transparent;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.tempat-event-btn:hover {
+  opacity: 0.8;
+}
+
+.tempat-event-btn:active {
+  background-color: var(--color1);
+  color: var(--color6);
+  box-shadow: 0 0 0 2px var(--color6) inset;
+}
