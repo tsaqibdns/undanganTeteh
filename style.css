@@ -8,6 +8,58 @@
   --font-3: 'raleway', sans-serif;
 }
 
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #fff9f5, #f3e7e9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  flex-direction: column;
+  animation: fadeOut 1s ease 2.5s forwards;
+}
+
+.splash-content {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #6b4c9a;
+}
+
+.splash-content img {
+  max-width: 120px;
+  margin-bottom: 1rem;
+}
+
+.splash-loader{
+                display: inline-block;
+              width: 32px;
+              height: 32px;
+              border: 3px solid #e0e7ef;
+              border-top: 3px solid #3a4d39;
+              border-radius: 50%;
+              animation: splash-spin 1s linear infinite;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes splash-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 body {
   background-color: var(--color4);
   color: var(--color6);
@@ -46,144 +98,203 @@ body {
   text-align: center;
 }
 
+.save-date {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
 .tanggal {
   padding-top: 2em;
   font-size: 1.3rem;
   font-family: var(--font-2);
   color: var(--color6);
-  text-align: center;
+  margin-bottom: 0.8rem;
 }
 
-.save-date button {
+.button-style {
+  display: inline-block;
   width: 7rem;
   font-size: 0.7rem;
+  font-family: var(--font-2);
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
   background-color: var(--color6);
   color: var(--color1);
+  border: 2px solid transparent;
   border-radius: 0.2rem;
-  border: none;
-  padding: 0.4rem 0rem 0.4rem 0rem;
-  font-weight: bold;
+  padding: 0.4rem 0;
   transition: background 0.2s, color 0.2s, border 0.2s;
+  z-index: 1000;
 }
 
-.save-date button:hover {
+.button-style:hover {
   opacity: 0.8;
 }
 
-.save-date button:active,
-.save-date button.clicked {
+.button-style:active {
   background-color: var(--color1);
   color: var(--color6);
   border: 2px solid var(--color6);
 }
 
-.mukodimah{
-  margin-top: 4rem;
+.simetris {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(-15%);
+  z-index: -100;
 }
 
-.img-bismillah{
+.mukodimah {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.img-bismillah {
   height: 2.4rem;
 }
 
-.ornament-doa{
+.ornament-doa {
   height: 0.4rem;
 }
 
 .dengan-rahmat-dan {
-  	font-size: 0.65rem;
-    line-height: 0.8rem;
-  	font-family: var(--font-2);
-  	color: #4f6d55;
-    margin: 1rem 3.5rem 0rem 3.5rem;
+  font-size: 0.65rem;
+  line-height: 0.8rem;
+  font-family: var(--font-2);
+  color: #4f6d55;
+  margin: 1rem 3.5rem 0;
 }
 
-.ubay-yusrin-anak{
-  color: var(--color6);
+.ubay-yusrin-anak {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
   margin-top: 2rem;
+  color: var(--color6);
+  padding: 0 1rem;
 }
 
-.nickname{
+.data-anak {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.and-symbol {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  padding-top: 1.7rem;
+  color: var(--color6);
+}
+
+.nickname {
   font-family: var(--font-1);
-  font-size: 6rem;
-  margin: 0rem 0rem 0rem 0rem;
-  padding: 0rem 0rem 0rem 0rem;
+  font-size: 3rem;
+  margin: 0;
 }
 
-.nama-anak{
+.nama-anak {
   font-family: var(--font-2);
   font-size: 1.5rem;
-  margin: 0rem 0rem 0rem 0rem;
-  padding: 0rem 0rem 0rem 0rem;
+  margin: 0;
 }
 
-.anak-urutan{
+.anak-urutan {
   font-family: var(--font-3);
   font-weight: bold;
   font-size: 0.7rem;
-  margin: 0rem 0rem 0rem 0rem;
-  padding: 0rem 0rem 0rem 0rem;
+  margin: 0;
 }
 
-.dari{
-  font-family: var(--font-3); 
-  margin: 0rem 0rem 0rem 0rem;
-  padding: 0rem 0rem 0rem 0rem;
+.dari {
+  font-family: var(--font-3);
+  margin: 0;
+  font-size: 0.7rem;
 }
 
-.waktu-tempat{
+.waktu-tempat {
+  width: 80%;
+  margin: 1.8rem auto;
+  padding: 1.5rem 1rem;
   border: 2px solid var(--color6);
   border-radius: 10px;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1.8rem;
-  margin-bottom: 1.8rem;
+
+  /* Multiple background images */
+  background-image: url('assets/pojok-kanan-special.svg'),
+    url('assets/pojok-kiri-special.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: top right, bottom left;
+  background-size: contain, contain;
+
+  /* Optional: biar teks tetap terbaca */
+  color: var(--color6);
+  backdrop-filter: brightness(1.1);
 }
 
-.judul-event h1{
+.judul-event h1 {
   font-family: var(--font-2);
   color: var(--color6);
   font-size: 1.5rem;
-  margin-bottom: 0rem;
+  margin: 0;
 }
 
-.atas{
+.atas,
+.bawah {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.atas {
   width: 5rem;
   margin-top: 1rem;
   margin-bottom: 0.3rem;
 }
 
-.bawah{
+.bawah {
   width: 11rem;
-  margin: 0rem;
+  margin-top: 0.3rem;
 }
 
-.waktu-event{
-  margin-top: 1rem;
+.waktu-event,
+.tempat-event {
+  margin-top: 1.2rem;
 }
 
-.waktu-event h1{
+.waktu-event h1,
+.tempat-event h1 {
   font-family: var(--font-2);
   letter-spacing: 0.2em;
   color: var(--color6);
   font-size: 1rem;
+  margin: 0.4rem 0;
+}
+
+.waktu-event-btn,
+.tempat-event-btn {
+  display: inline-block;
+  width: 9rem;
+  font-size: 0.7rem;
+  font-family: var(--font-2);
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.3rem;
+  padding: 0.4rem 0;
+  transition: background 0.2s, color 0.2s, border 0.2s;
 }
 
 .waktu-event-btn {
-  letter-spacing: 0.2em;
-  font-family: var(--font-2);
-  width: 9rem;
-  font-size: 0.7rem;
   background-color: var(--color6);
   color: var(--color1);
-  border-radius: 0.3rem;
   border: none;
-  padding: 0.4rem 0rem;
-  font-weight: bold;
-  transition: background 0.2s, color 0.2s, border 0.2s;
-  text-align: center;
-  display: inline-block;
-  text-decoration: none;
 }
 
 .waktu-event-btn:hover {
@@ -196,36 +307,11 @@ body {
   box-shadow: 0 0 0 2px var(--color6) inset;
 }
 
-
-.tempat-event{
-  margin-top: 1rem;
-  margin-bottom: 0.7rem;
-}
-
-.tempat-event h1{
-  font-family: var(--font-2);
-  letter-spacing: 0.2em;
-  color: var(--color6);
-  font-size: 1rem;
-}
-
 .tempat-event-btn {
-  width: 9rem;
-  letter-spacing: 0.2rem;
-  font-size: 0.7rem;
-  font-family: var(--font-2);
   background-color: var(--color);
   color: var(--color2);
-  box-shadow: 0 0 0 2px var(--color2) inset;
-  border-radius: 0.3rem;
-  border: none;
-  padding: 0.4rem 0rem;
-  font-weight: bold;
-  transition: background 0.2s, color 0.2s, border 0.2s;
   border: 2px solid transparent;
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
+  box-shadow: 0 0 0 2px var(--color2) inset;
 }
 
 .tempat-event-btn:hover {
@@ -236,4 +322,312 @@ body {
   background-color: var(--color1);
   color: var(--color6);
   box-shadow: 0 0 0 2px var(--color6) inset;
+}
+
+.alamat {
+  font-family: 'great vibes';
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  margin-top: 0.3rem;
+}
+
+.doa {
+  background-color: var(--color6);
+  padding: 3%;
+}
+
+.doa img {
+  width: 40%;
+  margin-top: 7%;
+}
+
+.doa h1 {
+  color: var(--color1);
+  font-family: var(--font-2);
+  font-weight: lighter;
+}
+
+.doa h1 span {
+  font-family: var(--font-2);
+  color: var(--color2);
+  font-size: 1.13rem;
+  font-weight: bolder;
+}
+
+.doa h3 {
+  font-family: var(--font-2);
+  color: var(--color1);
+  font-size: 0.7rem;
+  font-weight: lighter;
+  margin: 5% 8% 1.1% 8%;
+}
+
+.doa p {
+  font-family: var(--font-2);
+  color: var(--color1);
+  font-size: 0.68rem;
+  margin: 2% 10% 8% 10%;
+  font-style: italic;
+}
+
+/* .arrum{
+  padding: 2% 0 2% 0;
+  margin: auto;
+  width: 85%;
+  background-color: rgba(148, 167, 152, 0.5);
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.arrum p{
+  line-height: 105%;
+}
+
+.atas-arrum{
+  margin: 0;
+  padding: 0;
+}
+
+.bawah-arrum{
+  margin: 0;
+  padding: 0;
+} */
+
+.doa {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-image: url('assets/bunga-tengah.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem 0;
+  background-size: 400px;
+}
+
+.doa img {
+  width: 120px;
+  margin-bottom: 0.5rem;
+}
+
+.judul-doa {
+  font-family: var(--font-2);
+  font-size: 1.8rem;
+  color: var(--color1);
+  margin-bottom: 1rem;
+}
+
+.arabic-doa {
+  font-size: 1.3rem;
+  font-family: 'Scheherazade New', serif; /* Tambahkan jika pakai font Arab */
+  line-height: 2.1rem;
+  color: var(--color2);
+  margin-bottom: 0.5rem;
+}
+
+.arti-doa {
+  font-size: 1rem;
+  color: var(--color2);
+  margin: 0.5rem 0;
+}
+
+.sumber-doa {
+  font-size: 0.9rem;
+  color: var(--color4);
+  margin-bottom: 2rem;
+}
+
+.arrum {
+  margin: auto;
+  width: 90%;
+  background-color: rgba(148, 167, 152, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 1.5rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.arrum p {
+  line-height: 1.5;
+  font-size: 0.95rem;
+  color: var(--color1);
+  margin: 0.5rem 0;
+}
+
+.bawah-arrum {
+  font-style: italic;
+  font-weight: bold;
+  color: var(--color6);
+  font-size: 0.9rem;
+}
+
+.ucapan {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  font-family: var(--font-3);
+}
+
+.ucapan img {
+  width: 200x;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+  color: var(--color6);
+}
+
+.ucapan h1 {
+  font-family: var(--font-2);
+  color: var(--color6);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.form input,
+.form textarea,
+.form select,
+.form button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-bottom: 2px solid rgba(79, 109, 85, 0.7); /* var(--color6) with 0.7 opacity */
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-bottom-color 0.2s;
+}
+
+/* Custom select style */
+.form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: rgba(232, 236, 233, 0.5)
+    url("data:image/svg+xml,%3Csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L8 8L15 1' stroke='%234f6d55' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E")
+    no-repeat right 1rem center/1.2em;
+  cursor: pointer;
+  color: var(--color6);
+  font-family: var(--font-2);
+  padding-right: 2.5rem;
+}
+
+.form select:focus {
+  background-color: #fff;
+  border-bottom: 2px solid rgba(79, 109, 85, 1);
+  outline: none;
+}
+
+.form input:hover,
+.form input:focus,
+.form textarea:hover,
+.form textarea:focus,
+.form select:hover,
+.form select:focus {
+  border-bottom: 2px solid rgba(79, 109, 85, 1); /* full opacity */
+  outline: none;
+}
+
+.form input {
+  resize: vertical;
+  min-height: 10px;
+  max-height: 350px;
+  border-radius: 8px;
+  background: rgba(232, 236, 233, 0.5);
+  font-family: var(--font-2);
+  font-size: 1rem;
+  transition: box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(79, 109, 85, 0.07);
+}
+.form input:focus {
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(79, 109, 85, 0.13);
+}
+
+.form textarea {
+  resize: vertical;
+  min-height: 120px;
+  max-height: 350px;
+  border-radius: 8px;
+  background: rgba(232, 236, 233, 0.5);
+  font-family: var(--font-2);
+  font-size: 1rem;
+  transition: box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(79, 109, 85, 0.07);
+}
+.form textarea:focus {
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(79, 109, 85, 0.13);
+}
+
+.form button {
+  background-color: var(--color6);
+  color: var(--color1);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form button:hover {
+  background-color: var(--color4);
+}
+
+#listUcapan > div {
+  border-top: 1px solid var(--color4);
+  width: 100%;
+  padding: 1rem;
+}
+
+.status-badge {
+  font-size: 0.85rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 8px;
+  margin-left: 0.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.status-badge.true {
+  background-color: var(--color4);
+  color: var(--color1);
+}
+
+.status-badge.false {
+  background-color: var(--color2);
+  color: var(--color1);
+}
+
+/* Custom latar popup */
+.swal2-popup {
+  background-color: var(--color1) !important;
+  border-radius: 12px !important;
+  font-family: var(--font-2) !important;
+}
+
+/* Custom warna judul */
+.swal2-title {
+  color: var(--color6) !important;
+}
+
+/* Custom teks deskripsi */
+.swal2-html-container {
+  color: #555 !important;
+}
+
+/* Custom tombol konfirmasi */
+.swal2-confirm {
+  background-color: var(--color6) !important;
+  color: var(--color1) !important;
+  border-radius: 8px !important;
+  padding: 0.6rem 1.2rem !important;
+  font-weight: 600 !important;
+}
+
+/* Hover effect tombol */
+.swal2-confirm:hover {
+  background-color: var(--color4) !important;
 }

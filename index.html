@@ -11,6 +11,11 @@
       integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8e+z5l5e5c5e5c5e5c5e5c5e5c5e5c5e5c5"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,6 +38,66 @@
     />
   </head>
   <body>
+    <!-- Splash Screen -->
+    <div
+      id="splash-screen"
+      style="
+        position: fixed;
+        z-index: 9999;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        transition: opacity 0.6s;
+      "
+    >
+      <div class="splash-content" style="text-align: center">
+        <div
+          style="
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e0e7ef 0%, #f7fafc 100%);
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+          "
+        >
+          <img
+            src="assets/logo.png"
+            alt="Logo"
+            style="width: 48px; height: 48px; object-fit: contain"
+          />
+        </div>
+        <h1
+          style="
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.2rem;
+            color: #3a4d39;
+            margin-bottom: 0.5rem;
+          "
+        >
+          Bismillah...
+        </h1>
+        <p
+          style="
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.1rem;
+            color: #6b7a8f;
+            margin-bottom: 0;
+          "
+        >
+          Welcome to our special day
+        </p>
+        <div style="margin-top: 2rem">
+          <span></span>
+        </div>
+      </div>
+    </div>
+
     <div class="main-containter">
       <div class="hero">
         <div class="bg-bunga-pojok">
@@ -42,67 +107,86 @@
         <h4 class="text-center walimatul-urs fst-italic">Walimatul 'Urs</h4>
 
         <div class="ubaidillah-yusrina-container">
-          <p class="ubaidillah">Ubaidillah</p>
+          <p class="ubaidillah">Ubaidilah</p>
           <p class="ubaidillah">&</p>
           <p class="ubaidillah">Yusrina</p>
         </div>
 
         <div class="save-date text-center">
           <p class="tanggal">09 JUNE 2025</p>
-          <button>SAVE THE DATE</button>
+          <a
+            href="https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Ubaidillah+dan+Yusrina&dates=20250609T000000Z/20250609T020000Z&details=Jangan+lupa+datang+tepat+waktu+untuk+merayakan+hari+bahagia+Ubaidillah+dan+Yusrina%21&location=https%3A%2F%2Fmaps.app.goo.gl%2FxpLdiD7Q2DTNVv9r5"
+            target="_blank"
+            class="button-style"
+          >
+            SAVE THE DATE
+          </a>
+          <img
+            class="simetris"
+            src="assets/simetris-bunga.png"
+            alt="ornament bunga"
+          />
         </div>
 
         <div class="mukodimah text-center">
-          <img class="img-bismillah" src="assets/bismillah.svg" alt="" />
-          <div class="dengan-rahmat-dan text-center">
+          <img
+            class="img-bismillah"
+            src="assets/bismillah.svg"
+            alt="Bismillah"
+          />
+          <div class="dengan-rahmat-dan">
             Dengan Rahmat dan Ridho Allah Subhanahu wa Ta'ala, dengan segenap
             kerendahan hati. Perkenankanlah kami mengundang Bapak/Ibu/Saudara/i
             di acara pernikahan putra dan putri kami
           </div>
-          <img class="ornament-doa" src="assets/ornament-doa.svg" alt="" />
+          <img
+            class="ornament-doa"
+            src="assets/ornament-doa.svg"
+            alt="Ornamen Doa"
+          />
         </div>
 
         <div class="ubay-yusrin-anak">
-          <div>
+          <div class="data-anak">
             <h1 class="nickname text-center">Ubay</h1>
-            <p class="text-center nama-anak">Ubaidillah</p>
-            <p class="text-center anak-urutan">Putra Pertama dari</p>
-            <p class="text-center dari">Lorem ipsum</p>
-            <p class="text-center dari">&</p>
-            <p class="text-center dari">Dolor Sit</p>
+            <p class="nama-anak text-center">Ubaidilah</p>
+            <p class="anak-urutan text-center">Putra Kedua dari</p>
+            <p class="dari text-center">Bapak Dadang</p>
+            <p class="dari text-center">&</p>
+            <p class="dari text-center">Ibu Juju Rohtiasih</p>
           </div>
-          <div>
-            <h1
-              class="text-center"
-              style="
-                font-family: 'great Vibes';
-                font-size: 3rem;
-                padding-top: 1.7rem;
-              "
-            >
-              &
-            </h1>
-          </div>
-          <div>
+          <div class="and-symbol text-center">&</div>
+          <div class="data-anak">
             <h1 class="nickname text-center">Yusrin</h1>
-            <p class="text-center nama-anak">Yusrina</p>
-            <p class="text-center anak-urutan">Putri Pertama dari</p>
-            <p class="text-center dari">Abi Yayan Sofiyan</p>
-            <p class="text-center dari">&</p>
-            <p class="text-center dari">Umi Imas Masriyah</p>
+            <p class="nama-anak text-center">Yusrina</p>
+            <p class="anak-urutan text-center">Putri Pertama dari</p>
+            <p class="dari text-center">Abi Yayan Sofiyan</p>
+            <p class="dari text-center">&</p>
+            <p class="dari text-center">Umi Imas Masriyah</p>
           </div>
         </div>
 
         <div class="waktu-tempat">
           <div class="judul-event text-center">
-            <img class="atas" src="assets/ornament-doa.svg" />
-            <h1 style="text-align: center">Our Special<br />Wedding Event</h1>
-            <img class="bawah" src="assets/ornament-doa.svg" />
+            <img
+              class="atas"
+              src="assets/ornament-doa.svg"
+              alt="ornament atas"
+            />
+            <h1>Our Special<br />Wedding Event</h1>
+            <img
+              class="bawah"
+              src="assets/ornament-doa.svg"
+              alt="ornament bawah"
+            />
           </div>
 
           <div class="waktu-event text-center">
             <h1><strong>MON 06.JUNE.2025</strong></h1>
-            <h1>00D.00H.00M</h1>
+            <h1 id="countdown">
+              <span id="days">00</span>D. <span id="hours">00</span>H.
+              <span id="minutes">00</span>M. <span id="seconds">00</span>S.
+            </h1>
             <a
               href="https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Ubaidillah+dan+Yusrina&dates=20250609T000000Z/20250609T020000Z&details=Jangan+lupa+datang+tepat+waktu+untuk+merayakan+hari+bahagia+Ubaidillah+dan+Yusrina%21&location=https%3A%2F%2Fmaps.app.goo.gl%2FxpLdiD7Q2DTNVv9r5"
               target="_blank"
@@ -113,35 +197,70 @@
           </div>
 
           <div class="tempat-event text-center">
-            <h1><strong>Masjid Al-Ibrahimy</strong></h1>
-            <h1
-              style="
-                font-family: 'great vibes';
-                font-size: 1rem;
-                letter-spacing: 0.15rem;
-              ">
-              Maja Selatan, Maja, Majalengka
-            </h1>
+            <h1><strong>GOR Tunas harapan</strong></h1>
+            <h1 class="alamat">Maja Selatan, Maja, Majalengka</h1>
             <a
-              href="https://maps.app.goo.gl/xpLdiD7Q2DTNVv9r5"
+              href="https://maps.app.goo.gl/35h9ifokRivjHgEc9?g_st=aw"
               target="_blank"
-              class="tempat-event-btn">
+              class="waktu-event-btn"
+            >
               View Location
             </a>
+          </div>
+        </div>
+
+        <div class="doa text-center">
+          <img src="assets/ornament-ijo.svg" alt="Ornamen Islami" />
+          <h1 class="judul-doa">Wedding Dua</h1>
+          <h2 class="arabic-doa">
+            بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِى
+            خَيْرٍ
+          </h2>
+          <h3 class="arti-doa">
+            "Semoga Allah memberkahimu ketika bahagia dan ketika susah dan
+            mengumpulkan kalian berdua dalam kebaikan."
+          </h3>
+          <p class="sumber-doa">(HR. Abu Daud, no. 2130)</p>
+
+          <div class="arrum">
+            <p class="atas-arrum">
+              "Dan di antara ayat-ayat-Nya ialah Dia menciptakan untukmu
+              istri-istri dari jenismu sendiri, supaya kamu merasa nyaman
+              kepadanya, dan dijadikan-Nya di antaramu mawadah dan rahmah.
+              Sesungguhnya pada yang demikian itu benar-benar terdapat
+              tanda-tanda bagi kaum yang berpikir."
+            </p>
+            <p class="bawah-arrum">— QS. Ar-Rum: 21 —</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- <form id="ucapanForm">
-    <input type="text" id="nama" placeholder="Nama kamu" required>
-    <textarea id="pesan" placeholder="Ucapanmu" required></textarea>
-    <label><input type="checkbox" id="hadir"> Saya akan hadir</label>
-    <button type="submit">Kirim Ucapan</button>
-    </form>
-    <div id="listUcapan"></div> -->
+    <div class="ucapan">
+      <img class="text-center" src="assets/ornament-ucapan.svg" alt="" />
+      <h1 class="text-center">Leave a Prayer for the Couple</h1>
+
+      <div class="form">
+        <form id="ucapanForm">
+          <input type="text" id="nama" placeholder="Name" required />
+          <textarea
+            id="pesan"
+            placeholder="Write a Message of Barakah"
+            required
+          ></textarea>
+          <select class="form-select" id="hadir" required>
+            <option value="">Confirm Attendance</option>
+            <option value="true">Attending</option>
+            <option value="false">Not Attending</option>
+          </select>
+          <button type="submit">Send Wishes</button>
+        </form>
+      </div>
+      <div id="listUcapan"></div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/countdown/countdown.min.js"></script>
+    -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
@@ -149,6 +268,8 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script type="module" src="script.js"></script>
   </body>
 </html>
