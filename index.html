@@ -39,7 +39,7 @@
   </head>
   <body>
     <!-- Splash Screen -->
-    <div
+    <!-- <div
       id="splash-screen"
       style="
         position: fixed;
@@ -53,21 +53,9 @@
       "
     >
       <div class="splash-content" style="text-align: center">
-        <div
-          style="
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #e0e7ef 0%, #f7fafc 100%);
-            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
-          "
-        >
+        <div class="logo-container">
           <img
-            src="assets/logo.png"
+            src="assets/logo.svg"
             alt="Logo"
             style="width: 48px; height: 48px; object-fit: contain"
           />
@@ -96,7 +84,7 @@
           <span></span>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="main-containter">
       <div class="hero">
@@ -114,13 +102,9 @@
 
         <div class="save-date text-center">
           <p class="tanggal">09 JUNE 2025</p>
-          <a
-            href="https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Ubaidillah+dan+Yusrina&dates=20250609T000000Z/20250609T020000Z&details=Jangan+lupa+datang+tepat+waktu+untuk+merayakan+hari+bahagia+Ubaidillah+dan+Yusrina%21&location=https%3A%2F%2Fmaps.app.goo.gl%2FxpLdiD7Q2DTNVv9r5"
-            target="_blank"
-            class="button-style"
-          >
+            <span>
             SAVE THE DATE
-          </a>
+            </span>
           <img
             class="simetris"
             src="assets/simetris-bunga.png"
@@ -256,11 +240,25 @@
           <button type="submit">Send Wishes</button>
         </form>
       </div>
-      <div id="listUcapan"></div>
+      <div class="listUcapan" id="listUcapan"></div>
     </div>
 
+    <div class="closing text-center">
+      <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada mempelai pengantin. Atas kekehadiran serta do'a restu kami ucapkan terimakasih.</p>
+      <h3>Turut Berbahagia Segenap Keluarga Besar</h3>
+      <img src="assets/ornament-closing.svg" alt="">
+      <h2>
+        <span style="margin-right: 0.4rem;">Ubai</span>
+        <span>&</span>
+        <span style="margin-left: 0.4rem;">Yusrin</span>
+      </h2>
+    </div>
+
+    <footer>
+      &copy; 2025 <a href="https://instagram.com/tsaqiebabdanes" target="_blank" rel="noopener">@tsaqiebabdanes</a> . All rights reserved.
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/countdown/countdown.min.js"></script>
-    -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
@@ -270,6 +268,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <script type="module" src="script.js"></script>
+    <!-- <script type="module" src="script.js"></script> -->
   </body>
 </html>

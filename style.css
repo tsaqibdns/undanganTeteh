@@ -34,14 +34,26 @@
   margin-bottom: 1rem;
 }
 
-.splash-loader{
-                display: inline-block;
-              width: 32px;
-              height: 32px;
-              border: 3px solid #e0e7ef;
-              border-top: 3px solid #3a4d39;
-              border-radius: 50%;
-              animation: splash-spin 1s linear infinite;
+.splash-loader {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 3px solid #e0e7ef;
+  border-top: 3px solid #3a4d39;
+  border-radius: 50%;
+  animation: splash-spin 1s linear infinite;
+}
+
+.logo-container {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e0e7ef 0%, #f7fafc 100%);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
 }
 
 @keyframes fadeOut {
@@ -202,19 +214,19 @@ body {
 .nama-anak {
   font-family: var(--font-2);
   font-size: 1.5rem;
-  margin: 0;
+  margin: 0 0 1.3rem 0;
 }
 
 .anak-urutan {
   font-family: var(--font-3);
   font-weight: bold;
   font-size: 0.7rem;
-  margin: 0;
+  margin: 0 ;
 }
 
 .dari {
   font-family: var(--font-3);
-  margin: 0;
+  margin: 0 ;
   font-size: 0.7rem;
 }
 
@@ -577,9 +589,14 @@ body {
 }
 
 #listUcapan > div {
-  border-top: 1px solid var(--color4);
+  border-top: 1px solid var(--color6);
   width: 100%;
   padding: 1rem;
+}
+
+.listUcapan{
+  /* background-color:  var(--color2); */
+  border-radius: 10px;
 }
 
 .status-badge {
@@ -630,4 +647,61 @@ body {
 /* Hover effect tombol */
 .swal2-confirm:hover {
   background-color: var(--color4) !important;
+}
+
+.closing {
+  text-align: center;
+  padding: 1rem 1rem 1.5rem 1rem;
+  margin: 2rem auto 0 auto;
+  max-width: 520px;
+}
+
+.closing img {
+  width: 300px;
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1.2rem auto;
+  border-radius: 12px;
+}
+
+.closing h2 {
+  font-family: var(--font-1);
+  color: var(--color6);
+  font-size: 2.3rem;
+  margin: 0.7rem 0 0.6rem 0;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 8px #e0e7ef;
+}
+
+.closing h3 {
+  font-family: var(--font-3);
+  color: var(--color6);
+  font-size: 1rem;
+  margin: 1rem 0 1.1rem 0;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  font-weight: bolder;
+}
+
+.closing p {
+  font-family: var(--font-3);
+  color: var(--color6);
+  font-size: 0.95rem;
+  margin: 0.6rem 0 0 0;
+  /* line-height: 1; */
+  opacity: 0.92;
+}
+
+footer{
+  text-align:center;
+  font-size: 0.7rem;
+  color: var(--color1);
+  padding: 1rem 0;
+  background-color: var(--color4);
+}
+
+footer a {
+  color: var(--color1);
+  text-decoration: none;
 }
