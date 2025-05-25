@@ -476,7 +476,7 @@ body {
 
 .ucapan {
   max-width: 600px;
-  margin: 2rem auto;
+  margin: 1rem auto;
   padding: 1.5rem;
   background: #fff;
   border-radius: 12px;
@@ -651,8 +651,8 @@ body {
 
 .closing {
   text-align: center;
-  padding: 1rem 1rem 1.5rem 1rem;
-  margin: 2rem auto 0 auto;
+  padding: 0rem 1rem 1.5rem 1rem;
+  margin: 0rem auto 0 auto;
   max-width: 520px;
 }
 
