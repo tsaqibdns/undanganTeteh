@@ -266,8 +266,12 @@ body {
 
 .nama-anak {
   font-family: var(--font-2);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin: 0 0 1.3rem 0;
+}
+
+.nama-anak span {
+  font-size: 1rem;
 }
 
 .anak-urutan {
