@@ -18,6 +18,27 @@ const firebaseConfig = {
   measurementId: 'G-ZCVEYJ91MF',
 };
 
+const urlParams = new URLSearchParams(window.location.search);
+const namaTamu = urlParams.get('to');
+
+function toCamelCase(str) {
+  return str
+    .toLowerCase()
+    .split(' ')
+    .filter(word => word.trim() !== '')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
+if (namaTamu) {
+  const namaFormatted = toCamelCase(namaTamu);
+  const ucapanElement = document.getElementById('ucapan-nama');
+  if (ucapanElement) {
+    ucapanElement.innerText = `Yth. Bapak/Ibu/Saudara/i ${namaFormatted}`;
+  }
+}
+
+
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const ucapanRef = ref(db, 'ucapan');
@@ -65,12 +86,22 @@ form?.addEventListener('submit', async (e) => {
     });
 });
 
+function toCamelCase(str) {
+  return str
+    .toLowerCase()
+    .split(' ')
+    .filter(word => word.trim() !== '')
+    .map(word => word[0].toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
 onValue(ucapanRef, (snapshot) => {
   container.innerHTML = '';
   const data = snapshot.val();
   if (data) {
     const list = Object.values(data).sort((a, b) => b.waktu - a.waktu);
     list.forEach((item) => {
+      const formattedNama = toCamelCase(item.nama);
       const el = document.createElement('div');
       el.innerHTML = `
         <strong>${item.nama}</strong> 
@@ -83,6 +114,7 @@ onValue(ucapanRef, (snapshot) => {
     });
   }
 });
+
 
 const countDownDate = new Date('2025-06-09T00:00:00Z').getTime();
 
@@ -154,7 +186,6 @@ toggleBtn.addEventListener('click', () => {
   }
 });
 
-// Optional: icon berubah sesuai status awal
 document.addEventListener('DOMContentLoaded', () => {
   icon.classList.add(music.paused ? 'fa-play' : 'fa-pause');
 });
@@ -166,12 +197,10 @@ window.addEventListener('scroll', () => {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
   if (scrollTop > lastScrollTop) {
-    // Scroll ke bawah → sembunyikan tombol
     musicBtn.classList.add('hide');
   } else {
-    // Scroll ke atas → tampilkan tombol
     musicBtn.classList.remove('hide');
   }
 
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Hindari nilai negatif
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
 });
