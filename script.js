@@ -57,8 +57,8 @@ form?.addEventListener('submit', async (e) => {
     .catch((err) => {
       console.error('Gagal kirim ucapan:', err);
       Swal.fire({
-        title: 'Alhamdulillāh ✨',
-        text: 'SubḥānAllāh… Something went wrong',
+        title: 'Subhanallah',
+        text: 'Something went wrong. Maybe your name is not on the invitation list or there was a typo in your input.',
         icon: 'error',
         confirmButtonText: 'Inshā’Allāh I will',
       });

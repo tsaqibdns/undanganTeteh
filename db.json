@@ -1,16 +1,15 @@
 {
+  "undangan": {
+  "tsaqib abdan": true,
+  "yusrina": true
+}
+,
   "ucapan": {
-    "autoId1": {
-      "nama": "Budi",
+    "-uid1": {
+      "nama": "Tsaqib Abdan",
       "pesan": "Selamat menempuh hidup baru!",
       "hadir": true,
       "waktu": 1715862840000
-    },
-    "autoId2": {
-      "nama": "Sari",
-      "pesan": "Langgeng terus yaa",
-      "hadir": false,
-      "waktu": 1715862900000
     }
   }
 }
