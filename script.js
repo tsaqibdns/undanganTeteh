@@ -19,24 +19,15 @@ const firebaseConfig = {
 };
 
 const urlParams = new URLSearchParams(window.location.search);
-const namaTamu = urlParams.get('to');
-
-function toCamelCase(str) {
-  return str
-    .toLowerCase()
-    .split(' ')
-    .filter(word => word.trim() !== '')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
-}
-
-if (namaTamu) {
-  const namaFormatted = toCamelCase(namaTamu);
-  const ucapanElement = document.getElementById('ucapan-nama');
-  if (ucapanElement) {
-    ucapanElement.innerText = `Yth. Bapak/Ibu/Saudara/i ${namaFormatted}`;
+  const namaTamu = urlParams.get('to');
+  
+  if (namaTamu) {
+    const namaFormatted = toCamelCase(namaTamu);
+    const ucapanElement = document.getElementById('ucapan-nama');
+    if (ucapanElement) {
+      ucapanElement.innerText = `Yth. Bapak/Ibu/Saudara/i ${namaFormatted}`;
+    }
   }
-}
 
 
 const app = initializeApp(firebaseConfig);
