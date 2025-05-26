@@ -124,3 +124,54 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('main-content').style.display = 'block';
   }, 2500);
 });
+
+const bgMusic = document.getElementById('bg-music');
+
+function enableAudio() {
+  bgMusic.play().catch((e) => {
+    console.log('Autoplay prevented:', e);
+  });
+  document.removeEventListener('click', enableAudio);
+  document.removeEventListener('touchstart', enableAudio);
+}
+
+document.addEventListener('click', enableAudio);
+document.addEventListener('touchstart', enableAudio);
+
+const music = document.getElementById('bg-music');
+const toggleBtn = document.getElementById('toggle-music');
+const icon = toggleBtn.querySelector('i');
+
+toggleBtn.addEventListener('click', () => {
+  if (music.paused) {
+    music.play();
+    icon.classList.remove('fa-play');
+    icon.classList.add('fa-pause');
+  } else {
+    music.pause();
+    icon.classList.remove('fa-pause');
+    icon.classList.add('fa-play');
+  }
+});
+
+// Optional: icon berubah sesuai status awal
+document.addEventListener('DOMContentLoaded', () => {
+  icon.classList.add(music.paused ? 'fa-play' : 'fa-pause');
+});
+
+let lastScrollTop = 0;
+const musicBtn = document.getElementById('toggle-music');
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop) {
+    // Scroll ke bawah → sembunyikan tombol
+    musicBtn.classList.add('hide');
+  } else {
+    // Scroll ke atas → tampilkan tombol
+    musicBtn.classList.remove('hide');
+  }
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Hindari nilai negatif
+});

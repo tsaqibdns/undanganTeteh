@@ -7,6 +7,49 @@
   --font-2: 'Lora', serif;
   --font-3: 'raleway', sans-serif;
 }
+.music-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  background: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.music-btn.hide {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-100%);
+}
+
+#toggle-music {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.6rem;
+  cursor: pointer;
+  z-index: 999;
+  font-size: 1.2rem;
+  transition: background 0.3s, transform 0.2s;
+  backdrop-filter: blur(6px);
+}
+
+#toggle-music:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: scale(1.1);
+}
+#toggle-music:active {
+  transform: scale(0.95);
+}
 
 #splash-screen {
   position: fixed;
@@ -21,6 +64,16 @@
   z-index: 9999;
   flex-direction: column;
   animation: fadeOut 1s ease 2.5s forwards;
+
+  font-family: var(--font-2);
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  transition: opacity 0.6s;
 }
 
 .splash-content {
@@ -81,8 +134,8 @@ body {
 
 .main-container {
   background-color: var(--color1);
-  width: 700px;
-  height: 4590px;
+  width: 7px;
+  height: 9px;
 }
 
 .bg-bunga-pojok img {
@@ -174,8 +227,8 @@ body {
 }
 
 .dengan-rahmat-dan {
-  font-size: 0.65rem;
-  line-height: 0.8rem;
+  font-size: 0.7rem;
+  line-height: 1rem;
   font-family: var(--font-2);
   color: #4f6d55;
   margin: 1rem 3.5rem 0;
@@ -221,12 +274,12 @@ body {
   font-family: var(--font-3);
   font-weight: bold;
   font-size: 0.7rem;
-  margin: 0 ;
+  margin: 0;
 }
 
 .dari {
   font-family: var(--font-3);
-  margin: 0 ;
+  margin: 0;
   font-size: 0.7rem;
 }
 
@@ -293,6 +346,7 @@ body {
   display: inline-block;
   width: 9rem;
   font-size: 0.7rem;
+  margin-top: 1rem;
   font-family: var(--font-2);
   font-weight: bold;
   letter-spacing: 0.2em;
@@ -594,7 +648,7 @@ body {
   padding: 1rem;
 }
 
-.listUcapan{
+.listUcapan {
   /* background-color:  var(--color2); */
   border-radius: 10px;
 }
@@ -693,12 +747,12 @@ body {
   opacity: 0.92;
 }
 
-footer{
-  text-align:center;
+footer {
+  text-align: center;
   font-size: 0.7rem;
   color: var(--color1);
   padding: 1rem 0;
-  background-color: var(--color4);
+  background-color: var(--color6);
 }
 
 footer a {

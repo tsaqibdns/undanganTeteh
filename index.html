@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Ubaidilah & Yusrina | E-Wedding Invitation</title>
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -36,21 +37,25 @@
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
+
   </head>
   <body>
-    <div
-      id="splash-screen"
-      style="
-        position: fixed;
-        z-index: 9999;
-        inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #fff;
-        transition: opacity 0.6s;
-      "
-    >
+    <audio id="bg-music" loop>
+      <source
+        src="https://files.catbox.moe/rv8x8k.m4a"
+        type="audio/mpeg"
+      />
+    </audio>
+
+    <button id="toggle-music" aria-label="Toggle Music" class="music-btn">
+      <i class="fas fa-music"></i>
+    </button>
+
+    <div id="splash-screen">
       <div class="splash-content" style="text-align: center">
         <div class="logo-container">
           <img
@@ -101,9 +106,9 @@
 
         <div class="save-date text-center">
           <p class="tanggal">09 JUNE 2025</p>
-            <span>
+          <span>
             <!-- SAVE THE DATE -->
-            </span>
+          </span>
           <img
             class="simetris"
             src="assets/simetris-bunga.png"
@@ -165,7 +170,7 @@
           </div>
 
           <div class="waktu-event text-center">
-            <h1><strong>MON 06.JUNE.2025</strong></h1>
+            <h1><strong>MON 09.JUNE.2025</strong></h1>
             <h1 id="countdown">
               <span id="days">00</span>D. <span id="hours">00</span>H.
               <span id="minutes">00</span>M. <span id="seconds">00</span>S.
@@ -182,6 +187,15 @@
           <div class="tempat-event text-center">
             <h1><strong>GOR Tunas harapan</strong></h1>
             <h1 class="alamat">Maja Selatan, Maja, Majalengka</h1>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3584.2083930098306!2d108.3097458232871!3d-6.89389854340513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f25b65fd13105%3A0x15a179848134fdc4!2sGOR%20KARANG%20TARUNA%20TUNAS%20HARAPAN!5e1!3m2!1sid!2sid!4v1748178640001!5m2!1sid!2sid"
+              width="100%"
+              height="200%"
+              style="border: 2px"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
             <a
               href="https://maps.app.goo.gl/35h9ifokRivjHgEc9?g_st=aw"
               target="_blank"
@@ -240,22 +254,34 @@
         </form>
       </div>
       <div class="listUcapan" id="listUcapan"></div>
-      <hr>
+      <hr />
     </div>
 
     <div class="closing text-center">
-      <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada mempelai pengantin. Atas kekehadiran serta do'a restu kami ucapkan terimakasih.</p>
+      <p>
+        Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga apabila
+        Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada
+        mempelai pengantin. Atas kekehadiran serta do'a restu kami ucapkan
+        terimakasih.
+      </p>
       <h3>Turut Berbahagia Segenap Keluarga Besar</h3>
-      <img src="assets/ornament-closing.svg" alt="">
+      <img src="assets/ornament-closing.svg" alt="" />
       <h2>
-        <span style="margin-right: 0.4rem;">Ubai</span>
+        <span style="margin-right: 0.4rem">Ubai</span>
         <span>&</span>
-        <span style="margin-left: 0.4rem;">Yusrin</span>
+        <span style="margin-left: 0.4rem">Yusrin</span>
       </h2>
     </div>
 
     <footer>
-      &copy; 2025 <a href="https://instagram.com/tsaqiebabdanes" target="_blank" rel="noopener">@tsaqiebabdanes</a> . All rights reserved.
+      &copy; 2025
+      <a
+        href="https://instagram.com/tsaqiebabdanes"
+        target="_blank"
+        rel="noopener"
+        >@tsaqiebabdanes</a
+      >
+      . All rights reserved.
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/countdown/countdown.min.js"></script>
