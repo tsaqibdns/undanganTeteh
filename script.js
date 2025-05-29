@@ -77,7 +77,7 @@ form?.addEventListener('submit', async (e) => {
           (t.innerHTML = `\n        <strong>${
             e.nama
           }</strong> \n        <span class="status-badge ${e.hadir}">${
-            e.hadir ? 'Attend' : 'Not Attend'
+            e.hadir ? 'Hadir' : 'Tidas Hadir'
           }</span>\n        <br>${e.pesan}\n      `),
             container.appendChild(t);
         });
@@ -102,6 +102,7 @@ function updateCountdown() {
       '0'
     ));
 }
+
 updateCountdown(),
   setInterval(updateCountdown, 1e3),
   document.addEventListener('DOMContentLoaded', () => {
@@ -110,6 +111,7 @@ updateCountdown(),
         (document.getElementById('main-content').style.display = 'block');
     }, 2500);
   });
+  
 const bgMusic = document.getElementById('bg-music');
 function enableAudio() {
   bgMusic.play().catch((e) => {
