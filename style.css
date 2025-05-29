@@ -16,7 +16,7 @@
   border: none;
   padding: 10px 15px;
   border-radius: 50%;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -76,7 +76,7 @@
   transition: opacity 0.6s;
 }
 
-#ucapan-nama{
+#ucapan-nama {
   font-family: var(--font-3);
   font-size: 1.2rem;
   color: var(--color4);
@@ -135,14 +135,23 @@
 body {
   background-color: var(--color4);
   color: var(--color6);
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  /* max-width: 1080px; */
 }
 
 .main-container {
   background-color: var(--color1);
-  width: 7px;
-  height: 9px;
+  display: block; /* ini default, tapi pastikan aja */
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.hero {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px 3px var(--color4);
 }
 
 .bg-bunga-pojok img {
@@ -769,4 +778,156 @@ footer {
 footer a {
   color: var(--color1);
   text-decoration: none;
+}
+
+/* Mobile first, sudah disesuaikan dari awal */
+
+/* Tablet: 600px – 1024px */
+@media (min-width: 600px) {
+  .ubaidillah-yusrina-container {
+    font-size: 3.5rem;
+  }
+
+  .nickname {
+    font-size: 2.5rem;
+  }
+
+  .doa h1,
+  .judul-doa {
+    font-size: 1.8rem;
+  }
+
+  .arabic-doa {
+    font-size: 1.3rem;
+  }
+
+  .arti-doa,
+  .sumber-doa {
+    font-size: 1rem;
+  }
+
+  .waktu-tempat {
+    width: 85%;
+  }
+
+  .form input,
+  .form textarea,
+  .form select,
+  .form button {
+    font-size: 1rem;
+  }
+}
+
+/* Desktop: 1024px ke atas */
+@media (min-width: 1024px) {
+  .ubaidillah-yusrina-container {
+    font-size: 7rem;
+  }
+
+  .bg-bunga-pojok img {
+    width: 30%;
+    height: 30%;
+  }
+
+  .walimatul-urs {
+    font-size: 1.5rem;
+  }
+
+  .dengan-rahmat-dan {
+    font-size: 1.2rem;
+    margin: 1rem 20rem;
+    line-height: 1.7rem;
+  }
+
+  .img-bismillah {
+    height: 4rem;
+  }
+
+  .nama-anak {
+    font-size: 2rem;
+  }
+
+  .nama-anak span{
+    font-size: 1.8rem;
+  }
+
+  .anak-urutan {
+    font-size: 1.1rem;
+  }
+
+  .dari {
+    font-size: 1.1rem;
+  }
+
+  .tanggal {
+    font-size: 1.7rem;
+  }
+
+  .ornament-doa {
+    height: 1rem;
+  }
+
+  .ubay-yusrin-anak {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 3rem;
+  }
+
+  .nickname {
+    font-size: 6rem;
+  }
+
+  .waktu-tempat {
+    width: 70%;
+  }
+
+  .waktu-event h1,
+  .tempat-event h1 {
+    font-size: 1.2rem;
+  }
+
+  .judul-event h1 {
+    font-size: 2.2rem;
+  }
+
+  .waktu-event-btn,
+  .tempat-event-btn {
+    width: 12rem;
+    font-size: 0.9rem;
+  }
+
+  .doa h1,
+  .judul-doa {
+    font-size: 3rem;
+  }
+
+  .arabic-doa {
+    padding-top: 2rem;
+    font-size: 2.8rem;
+  }
+
+  .doa img{
+    width: 200px;
+    margin-top: 2rem;
+  }
+
+  .arti-doa,
+  .sumber-doa {
+    font-size: 1.1rem;
+  }
+
+  .form {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .form input,
+  .form textarea,
+  .form select,
+  .form button {
+    font-size: 1.1rem;
+  }
 }
