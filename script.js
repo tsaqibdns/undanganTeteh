@@ -106,6 +106,14 @@ function updateCountdown() {
 updateCountdown(),
   setInterval(updateCountdown, 1e3),
   document.addEventListener('DOMContentLoaded', () => {
+    // Unmute dan play audio setelah page load (beberapa browser mengizinkan ini)
+    try {
+      bgMusic.muted = false;
+      bgMusic.play();
+    } catch (e) {
+      // Jika gagal, biarkan user interaksi
+      console.log('Autoplay prevented:', e);
+    }
     setTimeout(() => {
       (document.getElementById('splash-screen').style.display = 'none'),
         (document.getElementById('main-content').style.display = 'block');
