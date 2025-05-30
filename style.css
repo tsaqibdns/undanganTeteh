@@ -225,12 +225,12 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  transform: translateY(-15%);
+  transform: translateY(-5%);
   z-index: -100;
 }
 
 .mukodimah {
-  margin-top: 10rem;
+  margin-top: 13rem;
   text-align: center;
 }
 
