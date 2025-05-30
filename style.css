@@ -243,8 +243,8 @@ body {
 }
 
 .dengan-rahmat-dan {
-  font-size: 0.7rem;
-  line-height: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
   font-family: var(--font-2);
   color: #4f6d55;
   margin: 1rem 3.5rem 0;
@@ -426,7 +426,7 @@ body {
 }
 
 #countdown{
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin-top: 1rem;
 }
 
@@ -882,7 +882,7 @@ footer a {
   }
 
   .dengan-rahmat-dan {
-    font-size: 1.2rem;
+    font-size: 2rem;
     margin: 1rem 20rem;
     line-height: 1.7rem;
   }
