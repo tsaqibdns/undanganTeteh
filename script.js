@@ -131,7 +131,7 @@ updateCountdown(),
       });
     }
   });
-  
+
 const bgMusic = document.getElementById('bg-music');
 function enableAudio() {
   bgMusic.play().catch((e) => {
