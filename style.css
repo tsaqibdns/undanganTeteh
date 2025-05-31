@@ -105,14 +105,53 @@
 }
 
 .splash-btn{
-  font-size:1.1rem;
-  min-width:180px;
+  font-size: 1.1rem;
+  min-width: 180px;
   font-family: var(--font-2);  
   background-color: var(--color6);
   color: var(--color1);
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
+  box-shadow: 0 4px 16px rgba(79, 109, 85, 0.18);
+  cursor: pointer;
+  transition: 
+    background 0.3s,
+    color 0.3s,
+    transform 0.2s,
+    box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.splash-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.25);
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+  z-index: 0;
+}
+
+.splash-btn:hover {
+  background: var(--color4);
+  color: var(--color1);
+  transform: scale(1.06) translateY(-2px);
+  box-shadow: 0 8px 32px rgba(79, 109, 85, 0.22);
+}
+
+.splash-btn:active {
+  transform: scale(0.97);
+}
+
+.splash-btn:hover::after {
+  width: 250%;
+  height: 250%;
 }
 
 .logo-container {
