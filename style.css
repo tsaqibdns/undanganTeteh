@@ -63,7 +63,7 @@
   justify-content: center;
   z-index: 9999;
   flex-direction: column;
-  animation: fadeOut 1s ease 2.5s forwards;
+  /* animation: fadeOut 1s ease 2.5s forwards; */
 
   font-family: var(--font-2);
   position: fixed;
@@ -102,6 +102,17 @@
   border-top: 3px solid #3a4d39;
   border-radius: 50%;
   animation: splash-spin 1s linear infinite;
+}
+
+.splash-btn{
+  font-size:1.1rem;
+  min-width:180px;
+  font-family: var(--font-2);  
+  background-color: var(--color6);
+  color: var(--color1);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
 }
 
 .logo-container {
@@ -882,7 +893,7 @@ footer a {
   }
 
   .dengan-rahmat-dan {
-    font-size: 2rem;
+    font-size: 1.2rem;
     margin: 1rem 20rem;
     line-height: 1.7rem;
   }

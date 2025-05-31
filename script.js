@@ -114,10 +114,22 @@ updateCountdown(),
       // Jika gagal, biarkan user interaksi
       console.log('Autoplay prevented:', e);
     }
-    setTimeout(() => {
-      (document.getElementById('splash-screen').style.display = 'none'),
-        (document.getElementById('main-content').style.display = 'block');
-    }, 2500);
+    const splashScreen = document.getElementById('splash-screen');
+    const mainContent = document.getElementById('main-content');
+    const openInvitationBtn = document.getElementById('open-invitation-btn');
+
+    if (openInvitationBtn) {
+      openInvitationBtn.addEventListener('click', () => {
+        splashScreen.style.display = 'none';
+        if (mainContent) mainContent.style.display = 'block';
+        try {
+          bgMusic.muted = false;
+          bgMusic.play();
+        } catch (e) {
+          console.log('Autoplay prevented:', e);
+        }
+      });
+    }
   });
   
 const bgMusic = document.getElementById('bg-music');
