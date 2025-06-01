@@ -438,8 +438,8 @@ body {
 }
 
 .waktu-event strong span{
-  word-spacing: 0.2rem;
-  font-size: 1.2rem;
+  /* word-spacing: 0.2rem; */
+  font-size: 1rem;
 
 }
 
@@ -985,6 +985,11 @@ footer a {
   .waktu-event h1,
   .tempat-event h1 {
     font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .waktu-event strong span{
+    font-size: 1.3rem;
   }
 
   .judul-event h1 {
